@@ -15,6 +15,9 @@ public:
     explicit hrMain(QWidget *parent = 0);
     ~hrMain();
 
+private slots:
+    void on_pushButton_Hback_clicked();
+
 private:
     Ui::hrMain *ui;
 };

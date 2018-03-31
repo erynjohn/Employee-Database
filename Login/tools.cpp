@@ -1,20 +1,20 @@
-#include "hrmain.h"
-#include "ui_hrmain.h"
+#include "tools.h"
+#include "ui_tools.h"
 #include "employeemainmenu.h"
 
-hrMain::hrMain(QWidget *parent) :
+tools::tools(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::hrMain)
+    ui(new Ui::tools)
 {
     ui->setupUi(this);
 }
 
-hrMain::~hrMain()
+tools::~tools()
 {
     delete ui;
 }
 
-void hrMain::on_pushButton_Hback_clicked()
+void tools::on_pushButton_Tback_clicked()
 {
     // hide old window and show new window from object //
         this->hide();

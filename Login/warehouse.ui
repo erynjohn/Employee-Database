@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>hrMain</class>
- <widget class="QDialog" name="hrMain">
+ <class>warehouse</class>
+ <widget class="QDialog" name="warehouse">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -16,21 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>0</y>
-     <width>201</width>
-     <height>51</height>
+     <x>126</x>
+     <y>30</y>
+     <width>101</width>
+     <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Welcome to HR Employee Management</string>
+    <string>Warehouse tracking</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Hback">
+  <widget class="QPushButton" name="pushButton_Wback">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>270</y>
+     <y>260</y>
      <width>111</width>
      <height>23</height>
     </rect>

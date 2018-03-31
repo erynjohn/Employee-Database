@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "hrmain.h"
+#include "tools.h"
+#include "warehouse.h"
 
 namespace Ui {
 class EmployeeMainMenu;
@@ -18,6 +20,10 @@ public:
 
 private slots:
     void on_pushButton_HR_clicked();
+
+    void on_pushButton_Tools_clicked();
+
+    void on_pushButton_warehouse_clicked();
 
 private:
     Ui::EmployeeMainMenu *ui;

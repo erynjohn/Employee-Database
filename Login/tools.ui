@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>hrMain</class>
- <widget class="QDialog" name="hrMain">
+ <class>tools</class>
+ <widget class="QDialog" name="tools">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,20 +17,20 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>0</y>
-     <width>201</width>
-     <height>51</height>
+     <y>20</y>
+     <width>161</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Welcome to HR Employee Management</string>
+    <string>tool checkin/checkout</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Hback">
+  <widget class="QPushButton" name="pushButton_Tback">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>270</y>
+     <y>260</y>
      <width>111</width>
      <height>23</height>
     </rect>

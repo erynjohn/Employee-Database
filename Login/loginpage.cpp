@@ -2,6 +2,7 @@
 #include "ui_loginpage.h"
 #include <QMessageBox>
 
+
 LoginPage::LoginPage(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::LoginPage)
@@ -24,9 +25,10 @@ void LoginPage::on_login_clicked()
     {
         QMessageBox::information(this, "Login", "Accepted");
         // hide old window and show new window from object //
-        hide();
-        employeeMainMenu = new EmployeeMainMenu(this);
-        employeeMainMenu->show();
+            this->hide();
+            EmployeeMainMenu empmenu;
+            empmenu.setModal(true);
+            empmenu.exec();
     }
     // wrong password warning message //
     else{
