@@ -25,6 +25,8 @@ private slots:
 
     void on_pushButton_warehouse_clicked();
 
+    void on_pushButton_logout_clicked();
+
 private:
     Ui::EmployeeMainMenu *ui;
     // Object of class //

@@ -1,5 +1,7 @@
 #include "employeemainmenu.h"
 #include "ui_employeemainmenu.h"
+#include "loginpage.h"
+#include <QMessageBox>
 
 EmployeeMainMenu::EmployeeMainMenu(QWidget *parent) :
     QDialog(parent),
@@ -40,4 +42,13 @@ void EmployeeMainMenu::on_pushButton_warehouse_clicked()
         Warehouse.setModal(true);
         Warehouse.exec();
 
+}
+
+void EmployeeMainMenu::on_pushButton_logout_clicked()
+{
+    this->hide();
+    LoginPage logout;
+    logout.activateWindow();
+    QMessageBox::information(this, "Thank You!", "You have been Logged Out");
+    logout.close();
 }

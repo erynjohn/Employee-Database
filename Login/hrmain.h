@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_Hback_clicked();
 
+    void on_pushButton_loadTable_clicked();
+
 private:
     Ui::hrMain *ui;
 };

@@ -1,12 +1,17 @@
 #include "hrmain.h"
 #include "ui_hrmain.h"
 #include "employeemainmenu.h"
+#include "loginpage.h"
+#include <QSqlQueryModel>
+#include <QSqlQuery>
+#include <QDebug>
 
 hrMain::hrMain(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::hrMain)
 {
     ui->setupUi(this);
+
 }
 
 hrMain::~hrMain()
@@ -21,4 +26,22 @@ void hrMain::on_pushButton_Hback_clicked()
         EmployeeMainMenu empMenu;
         empMenu.setModal(true);
         empMenu.exec();
+}
+
+// SELECT [EmpID],[FName],[LName],[EmpAddress],[EmpJobTitle],[HireDate],[TerminationDate] FROM [GbManuf][dbo].[Employee]
+
+void hrMain::on_pushButton_loadTable_clicked()
+{
+    LoginPage conn;
+    conn.connOpen();
+
+    QSqlQueryModel *model = new QSqlQueryModel();
+    QSqlQuery* qry = new QSqlQuery(conn.db);
+    qry->prepare("SELECT * FROM Employee");
+    qry->exec();
+    model->setQuery(*qry);
+    ui->tableView->setModel(model);
+    qDebug() << (model->rowCount());
+    conn.connClose();
+
 }

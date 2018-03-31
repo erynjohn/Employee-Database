@@ -1,6 +1,7 @@
 #include "tools.h"
 #include "ui_tools.h"
 #include "employeemainmenu.h"
+#include "loginpage.h"
 
 tools::tools(QWidget *parent) :
     QDialog(parent),
@@ -22,3 +23,5 @@ void tools::on_pushButton_Tback_clicked()
         empMenu.setModal(true);
         empMenu.exec();
 }
+
+//SELECT [EquipmentID],[EmpID],[ToolStatus],[CheckInDate],[CheckOutDate] FROM [GbManuf][dbo].[InventoryStatus]

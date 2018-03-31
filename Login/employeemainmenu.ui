@@ -25,7 +25,7 @@
    <property name="title">
     <string>Employee Systems Main Menu</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>4</x>
@@ -58,6 +58,19 @@
      </item>
     </layout>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_logout">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
   </widget>
  </widget>
  <resources/>

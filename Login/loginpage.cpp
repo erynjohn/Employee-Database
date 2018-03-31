@@ -23,7 +23,7 @@ void LoginPage::on_login_clicked()
 
     if(username == "test" && password == "test")
     {
-        QMessageBox::information(this, "Login", "Accepted");
+        QMessageBox::information(this, "Login", "You are now logged in");
         // hide old window and show new window from object //
             this->hide();
             EmployeeMainMenu empmenu;
@@ -32,7 +32,7 @@ void LoginPage::on_login_clicked()
     }
     // wrong password warning message //
     else{
-        QMessageBox::warning(this, "Login", "Failed");
+        QMessageBox::warning(this, "Warning", "Login has failed");
     }
 
 }
