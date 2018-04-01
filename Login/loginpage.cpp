@@ -16,7 +16,6 @@ LoginPage::LoginPage(QWidget *parent) :
 LoginPage::~LoginPage()
 {
     delete ui;
-    connClose();
 }
 
 void LoginPage::on_login_clicked()

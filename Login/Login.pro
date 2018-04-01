@@ -30,18 +30,21 @@ SOURCES += \
     employeemainmenu.cpp \
     hrmain.cpp \
     tools.cpp \
-    warehouse.cpp
+    warehouse.cpp \
+    toolsmenu.cpp
 
 HEADERS += \
         loginpage.h \
     employeemainmenu.h \
     hrmain.h \
     tools.h \
-    warehouse.h
+    warehouse.h \
+    toolsmenu.h
 
 FORMS += \
         loginpage.ui \
     employeemainmenu.ui \
     hrmain.ui \
     tools.ui \
-    warehouse.ui
+    warehouse.ui \
+    toolsmenu.ui

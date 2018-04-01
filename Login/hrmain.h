@@ -20,6 +20,16 @@ private slots:
 
     void on_pushButton_loadTable_clicked();
 
+    void on_lineEdit_returnPressed();
+
+    void on_lineEdit_FName_returnPressed();
+
+    void on_lineEdit_EmpAddress_returnPressed();
+
+    void on_lineEdit_EmpJobTitle_returnPressed();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::hrMain *ui;
 };

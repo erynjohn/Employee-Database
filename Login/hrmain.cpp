@@ -42,6 +42,12 @@ void hrMain::on_pushButton_loadTable_clicked()
     model->setQuery(*qry);
     ui->tableView->setModel(model);
     qDebug() << (model->rowCount());
-    conn.connClose();
 
+
+}
+
+
+void hrMain::on_pushButton_clicked()
+{
+    // connect line edits with pushbutton to populate the database
 }

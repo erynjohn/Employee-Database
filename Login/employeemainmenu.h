@@ -29,9 +29,6 @@ private slots:
 
 private:
     Ui::EmployeeMainMenu *ui;
-    // Object of class //
-    hrMain *hrmain;
-
 };
 
 #endif // EMPLOYEEMAINMENU_H

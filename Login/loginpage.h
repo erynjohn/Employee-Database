@@ -19,7 +19,6 @@ public:
     void connClose()
     {
         db.close();
-//        db.removeDatabase(QSqlDatabase::defaultConnection);
     }
     bool connOpen()
     {
