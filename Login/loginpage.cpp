@@ -1,6 +1,9 @@
 #include "loginpage.h"
 #include "ui_loginpage.h"
 #include <QMessageBox>
+#include <QDebug>
+#include <QSqlQuery>
+#include <QString>
 
 
 LoginPage::LoginPage(QWidget *parent) :
@@ -13,26 +16,38 @@ LoginPage::LoginPage(QWidget *parent) :
 LoginPage::~LoginPage()
 {
     delete ui;
+    connClose();
 }
 
 void LoginPage::on_login_clicked()
 {
+    ui->label->setText("");
+    ui->label_2->setText("*");
     QString username = ui->lineEdit_usrname->text();
     QString password = ui->lineEdit_password->text();
-    // Displays login message //
-
-    if(username == "test" && password == "test")
+    //Connect to the database
+    connOpen();
+    if(!db.isOpen())
     {
-        QMessageBox::information(this, "Login", "You are now logged in");
-        // hide old window and show new window from object //
+        qDebug() << "Database error";
+    }
+    QSqlQuery qry;
+    if(qry.exec("SELECT * FROM Employee WHERE LName=\'"+username +"'and EmpID='"+password +"'"))
+    {
+        if(qry.next())
+        {
+            QMessageBox::information(this, "Login", "You are now logged in");
+            QString msg ="username = " + qry.value(0).toString() + " \n " +
+                    "password = " + qry.value(3).toString();
             this->hide();
             EmployeeMainMenu empmenu;
             empmenu.setModal(true);
             empmenu.exec();
-    }
-    // wrong password warning message //
-    else{
-        QMessageBox::warning(this, "Warning", "Login has failed");
-    }
 
+        }
+        else
+        {
+            QMessageBox::warning(this, "Warning", "Login has failed");
+        }
+    }
 }

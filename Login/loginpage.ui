@@ -26,7 +26,7 @@
     <property name="title">
      <string>Employee Systems Login</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -66,7 +66,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_password"/>
+         <widget class="QLineEdit" name="lineEdit_password">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

@@ -50,7 +50,6 @@ private slots:
 
 private:
     Ui::LoginPage *ui;
-    // object of class //
 
 };
 
