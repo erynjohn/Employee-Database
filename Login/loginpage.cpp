@@ -35,6 +35,7 @@ void LoginPage::on_login_clicked()
     {
         if(qry.next())
         {
+
             QMessageBox::information(this, "Login", "You are now logged in");
             QString msg ="username = " + qry.value(0).toString() + " \n " +
                     "password = " + qry.value(3).toString();

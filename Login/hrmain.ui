@@ -39,155 +39,154 @@
     <string>Back to main menu</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_edit">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>320</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>60</y>
+     <width>249</width>
+     <height>341</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton_loadTable">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>380</y>
+     <y>270</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Refresh Table</string>
+    <string>Refresh</string>
    </property>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>19</x>
-     <y>219</y>
-     <width>651</width>
-     <height>151</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QTableView" name="tableView"/>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_LName">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>70</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>Last Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_FName">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>70</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>First Name</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_EmpAddress">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>100</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>Address</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_EmpJobTitle">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>100</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>Job Title</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_HireDate">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>100</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>Hire Date</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_EmpID">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>113</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>Employee ID</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>130</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Submit</string>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>40</y>
-     <width>381</width>
-     <height>131</height>
+     <width>137</width>
+     <height>252</height>
     </rect>
    </property>
-   <property name="title">
-    <string>Add Employee</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_LName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_LName">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Last Name</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>First Name</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_FName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_FName">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>First Name</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Address</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_EmpAddress</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_EmpAddress">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Address</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Job Title</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_EmpJobTitle</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_EmpJobTitle">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Job Title</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Hire Date MM/DD/YYYY</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_hire"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_save">
+      <property name="text">
+       <string>Save</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

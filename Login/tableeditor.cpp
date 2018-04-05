@@ -11,9 +11,7 @@ TableEditor::TableEditor(const QString &tableName, QWidget *parent)
     model->setEditStrategy(QSqlTableModel::OnManualSubmit);
     model->select();
 
-    model->setHeaderData(0, Qt::Horizontal, tr("ID"));
-    model->setHeaderData(1, Qt::Horizontal, tr("First name"));
-    model->setHeaderData(2, Qt::Horizontal, tr("Last name"));
+
 
     QTableView *view = new QTableView;
     view->setModel(model);
