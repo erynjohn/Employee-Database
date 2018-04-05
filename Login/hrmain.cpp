@@ -1,17 +1,18 @@
 #include "hrmain.h"
 #include "ui_hrmain.h"
 #include "employeemainmenu.h"
+#include "tableeditor.h"
 #include "loginpage.h"
 #include <QSqlQueryModel>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QApplication>
 
 hrMain::hrMain(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::hrMain)
 {
     ui->setupUi(this);
-
 }
 
 hrMain::~hrMain()
@@ -43,6 +44,10 @@ void hrMain::on_pushButton_loadTable_clicked()
     ui->tableView->setModel(model);
     qDebug() << (model->rowCount());
 
+    QTableView *view = new QTableView;
+    view->setModel(model);
+    view->resizeColumnsToContents();
+    view->show();
 
 }
 

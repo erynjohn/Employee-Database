@@ -31,7 +31,8 @@ SOURCES += \
     hrmain.cpp \
     tools.cpp \
     warehouse.cpp \
-    toolsmenu.cpp
+    toolsmenu.cpp \
+    tableeditor.cpp
 
 HEADERS += \
         loginpage.h \
@@ -39,7 +40,8 @@ HEADERS += \
     hrmain.h \
     tools.h \
     warehouse.h \
-    toolsmenu.h
+    toolsmenu.h \
+    tableeditor.h
 
 FORMS += \
         loginpage.ui \
@@ -47,4 +49,5 @@ FORMS += \
     hrmain.ui \
     tools.ui \
     warehouse.ui \
-    toolsmenu.ui
+    toolsmenu.ui \
+    tableeditor.ui
