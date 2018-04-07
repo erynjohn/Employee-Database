@@ -18,6 +18,14 @@ public:
 private slots:
     void on_pushButton_Tback_clicked();
 
+    void on_pushButton_save_tool_clicked();
+
+    void on_pushButton_delete_tool_clicked();
+
+    void on_pushButton_loadTable_tool_clicked();
+
+    void on_pushButton_edit_tool_clicked();
+
 private:
     Ui::tools *ui;
 };

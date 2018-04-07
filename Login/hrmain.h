@@ -19,8 +19,6 @@ private slots:
 
     void on_pushButton_loadTable_clicked();
 
-    void on_pushButton_clicked();
-
     void on_pushButton_add_clicked();
 
     void on_pushButton_edit_clicked();
@@ -28,6 +26,8 @@ private slots:
     void on_pushButton_save_clicked();
 
     void on_lineEdit_EmpID_cursorPositionChanged(int arg1, int arg2);
+
+    void on_pushButton_delete_clicked();
 
 private:
     Ui::hrMain *ui;

@@ -35,6 +35,7 @@ void LoginPage::on_login_clicked()
     {
         if(qry.next())
         {
+            //Set login authentication //
 
             QMessageBox::information(this, "Login", "You are now logged in");
             QString msg ="username = " + qry.value(0).toString() + " \n " +
