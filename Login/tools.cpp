@@ -20,34 +20,26 @@ tools::~tools()
     delete ui;
 }
 
-void tools::on_pushButton_Tback_clicked()
-{
-    // hide old window and show new window from object //
-        this->hide();
-        EmployeeMainMenu empMenu;
-        empMenu.setModal(true);
-        empMenu.exec();
-}
-
-
 void tools::on_pushButton_save_tool_clicked()
 {
-
-    QString badge, last, tool, date;
-    last=ui->lineEdit_equip_tools->text();
-    tool=ui->lineEdit_badge_tools->text();
-    date=ui->lineEdi_LName->text();
+    //Save info into tool database//
+    QString last, tool, date, badge;
+    last=ui->lineEdi_LName->text();
+    tool=ui->lineEdit_toolName->text();
+    date=ui->lineEdit_checkout->text();
+    badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Tools (BadgeNum, LName, ToolName, CheckoutDate) VALUES (?, ?, ?, ?)" );
+    query.prepare( "INSERT INTO Tools (LastName, ToolName, CheckoutDate, BadgeNumber) VALUES (?, ?, ?, ?)" );
      query.addBindValue(last);
     query.addBindValue(tool);
     query.addBindValue(date);
+    query.addBindValue(badge);
 
     {
         if(query.exec())
         {
-            QMessageBox::critical(this, "Save","Database updated!");
+            QMessageBox::information(this, "Save","Database updated!");
         }
         else
         {
@@ -59,12 +51,30 @@ void tools::on_pushButton_save_tool_clicked()
 void tools::on_pushButton_delete_tool_clicked()
 {
 
+    // Delete selected row using badge number //
+    QString badge;
+    badge=ui->lineEdit_badge_tools->text();
+    QSqlQuery query;
+    query.prepare("DELETE FROM Tools WHERE BadgeNumber='"+badge+"'");
+
+    {
+        if(query.exec())
+        {
+
+            QMessageBox::information(this, "Delete","Database updated!");
+        }
+        else
+        {
+            QMessageBox::warning(this, "Error", "Delete Failed!");
+        }
+    }
 }
 
 void tools::on_pushButton_loadTable_tool_clicked()
 {
     LoginPage conn;
 
+    // Refresh tool database //
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
@@ -82,23 +92,33 @@ void tools::on_pushButton_loadTable_tool_clicked()
 
 void tools::on_pushButton_edit_tool_clicked()
 {
+    //Update tool database //
     QString last, tool, checkout, badge;
-    last=ui->lineEdit_equip_tools->text();
-    tool=ui->lineEdit_equip_tools->text();
+    last=ui->lineEdi_LName->text();
+    tool=ui->lineEdit_toolName->text();
     checkout=ui->lineEdit_checkout->text();
     badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Tools SET LName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"' badgeNum='"+badge+"' WHERE BadgeNum='"+badge+"'");
+    query.prepare("UPDATE Tools SET LastName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', BadgeNumber='"+badge+"' WHERE BadgeNumber='"+badge+"'");
     {
         if(query.exec())
         {
 
-            QMessageBox::critical(this, "Save","Database updated!");
+            QMessageBox::information(this, "Save","Database updated!");
         }
         else
         {
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+}
+
+void tools::on_pushButton_Hback_clicked()
+{
+    // Go back to main menu //
+        this->hide();
+        EmployeeMainMenu empMenu;
+        empMenu.setModal(true);
+        empMenu.exec();
 }

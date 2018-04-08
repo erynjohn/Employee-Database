@@ -68,9 +68,9 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>27</x>
      <y>110</y>
-     <width>178</width>
+     <width>191</width>
      <height>312</height>
     </rect>
    </property>
@@ -89,6 +89,9 @@
       <property name="text">
        <string>Last Name</string>
       </property>
+      <property name="buddy">
+       <cstring>lineEdi_LName</cstring>
+      </property>
      </widget>
     </item>
     <item>
@@ -100,12 +103,12 @@
        <string>Tool Name</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit_LName</cstring>
+       <cstring>lineEdit_toolName</cstring>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_equip_tools">
+     <widget class="QLineEdit" name="lineEdit_toolName">
       <property name="text">
        <string/>
       </property>
@@ -117,10 +120,10 @@
     <item>
      <widget class="QLabel" name="label_desc">
       <property name="text">
-       <string>Checkout Date</string>
+       <string>Checkout Date MM-DD-YYYY</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit_EmpJobTitle</cstring>
+       <cstring>lineEdit_checkout</cstring>
       </property>
      </widget>
     </item>
@@ -140,7 +143,7 @@
        <string>Badge Number</string>
       </property>
       <property name="buddy">
-       <cstring>lineEdit_Badge</cstring>
+       <cstring>lineEdit_badge_tools</cstring>
       </property>
      </widget>
     </item>
