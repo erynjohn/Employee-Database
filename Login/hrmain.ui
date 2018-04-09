@@ -13,275 +13,188 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>0</y>
-     <width>201</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Welcome to HR Employee Management</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Hback">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>10</y>
-     <width>111</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back to main menu</string>
-   </property>
-  </widget>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>178</x>
-     <y>40</y>
-     <width>531</width>
-     <height>401</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>40</y>
-     <width>171</width>
-     <height>401</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Employee Information</string>
-   </property>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>23</y>
-      <width>51</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>First Name</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_LName</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_LName">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>45</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>71</y>
-      <width>50</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Last Name</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_FName</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_FName">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>93</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>119</y>
-      <width>39</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Address</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_EmpAddress</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_EmpAddress">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>140</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>166</y>
-      <width>40</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Job Title</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_EmpJobTitle</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_EmpJobTitle">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>188</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>214</y>
-      <width>110</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Hire Date MM/DD/YYYY</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_hire</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_hire">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>236</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Badge">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>262</y>
-      <width>70</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Badge Number</string>
-    </property>
-    <property name="buddy">
-     <cstring>lineEdit_Badge</cstring>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_Badge">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>284</y>
-      <width>133</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>330</y>
-      <width>151</width>
-      <height>54</height>
-     </rect>
-    </property>
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <widget class="QPushButton" name="pushButton_save">
-       <property name="text">
-        <string>Save</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QPushButton" name="pushButton_edit">
-       <property name="text">
-        <string>Update</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QPushButton" name="pushButton_loadTable">
-       <property name="text">
-        <string>Refresh</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="pushButton_delete">
-       <property name="text">
-        <string>Delete</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_Hback">
+     <property name="text">
+      <string>Back to main menu</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Employee Information</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="11" column="0">
+       <widget class="QLineEdit" name="lineEdit_Badge"/>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_Badge">
+        <property name="text">
+         <string>Badge Number</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_Badge</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton_save">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_edit">
+          <property name="text">
+           <string>Update</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_loadTable">
+          <property name="text">
+           <string>Refresh</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_delete">
+          <property name="text">
+           <string>Delete</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLineEdit" name="lineEdit_FName">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Last Name</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_FName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Address</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_EmpAddress</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLineEdit" name="lineEdit_EmpJobTitle">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Hire Date MM/DD/YYYY</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_hire</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Job Title</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_EmpJobTitle</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLineEdit" name="lineEdit_hire"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>First Name</string>
+        </property>
+        <property name="buddy">
+         <cstring>lineEdit_LName</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="lineEdit_LName">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLineEdit" name="lineEdit_EmpAddress">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QTableView" name="tableView">
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Welcome to HR Employee Management</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
