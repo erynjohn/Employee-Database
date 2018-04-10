@@ -33,18 +33,21 @@ void warehouse::on_pushButton_Wback_clicked()
 void warehouse::on_pushButton_save_WT_clicked()
 {
     //Save info into warehouse database//
-    QString LNumber, ID, material, status;
-    LNumber=ui->lineEdit_LineNumber->text();
+    QString Wname, StockNum, qty, material, status;
+    Wname=ui->lineEdit_Wname->text();
     material=ui->lineEdit_material_WT->text();
-    ID=ui->lineEdit_warehouseID_WT->text();
-    status=ui->lineEdit_status_WT->text();
+    StockNum=ui->lineEdit_stockNum->text();
+    qty=ui->lineEdit_qty->text();
+    status=ui->lineEdit_status->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Warehouses (LineNumber, WarehouseID, Material, Status) VALUES (?, ?, ?, ?)" );
-     query.addBindValue(LNumber);
-    query.addBindValue(ID);
+    query.prepare( "INSERT INTO Warehouse (WarehouseName, StockNumber,Quantity, Material, Status) VALUES (?, ?, ?, ?, ?)" );
+    query.addBindValue(Wname);
+    query.addBindValue(StockNum);
+    query.addBindValue(qty);
     query.addBindValue(material);
     query.addBindValue(status);
+
 
     {
         if(query.exec())
@@ -67,7 +70,7 @@ void warehouse::on_pushButton_Refresh_WT_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("SELECT * FROM Warehouses");
+    qry->prepare("EXEC sprefresh_war");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
@@ -81,10 +84,10 @@ void warehouse::on_pushButton_Refresh_WT_clicked()
 void warehouse::on_pushButton_delete_WT_clicked()
 {
     // Delete selected row using badge number //
-    QString LNumber;
-    LNumber=ui->lineEdit_LineNumber->text();
+    QString StockNum;
+    StockNum=ui->lineEdit_stockNum->text();
     QSqlQuery query;
-    query.prepare("DELETE FROM Warehouses WHERE LineNumber='"+LNumber+"'");
+    query.prepare("DELETE FROM Warehouse WHERE StockNumber='"+StockNum+"'");
 
     {
         if(query.exec())
@@ -103,14 +106,15 @@ void warehouse::on_pushButton_delete_WT_clicked()
 void warehouse::on_pushButton_Update_WT_clicked()
 {
     //Update warehouse database //
-    QString ID, material, status, LNumber;
-    LNumber=ui->lineEdit_LineNumber->text();
-    ID=ui->lineEdit_warehouseID_WT->text();
+    QString Wname, qty, material, status, StockNum;
+    Wname=ui->lineEdit_Wname->text();
+    StockNum=ui->lineEdit_stockNum->text();
+    qty=ui->lineEdit_qty->text();
     material=ui->lineEdit_material_WT->text();
-    status=ui->lineEdit_status_WT->text();
+    status=ui->lineEdit_status->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Warehouses SET WarehouseID='"+ID+"', Material='"+material+"',Status='"+status+"' WHERE LineNumber='"+LNumber+"'");
+    query.prepare("UPDATE Warehouse SET WarehouseName='"+Wname+"', StockNumber='"+StockNum+"', Quantity='"+qty+"', Material='"+material+"',Status='"+status+"' WHERE StockNumber='"+StockNum+"'");
     {
         if(query.exec())
         {

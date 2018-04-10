@@ -31,13 +31,13 @@ void LoginPage::on_login_clicked()
         qDebug() << "Database error";
     }
     QSqlQuery qry;
-    if(qry.exec("SELECT * FROM Employee WHERE LName=\'"+username +"'and EmpID='"+password +"'"))
+    if(qry.exec("SELECT * FROM Emp WHERE LName=\'"+username +"'and EmpID='"+password +"'"))
     {
         if(qry.next())
         {
             //Set login authentication //
 
-            QMessageBox::information(this, "Login", "You are now logged in");
+            QMessageBox::information(this, "Login",username + ", You are logged in");
             QString msg ="username = " + qry.value(0).toString() + " \n " +
                     "password = " + qry.value(3).toString();
             this->hide();

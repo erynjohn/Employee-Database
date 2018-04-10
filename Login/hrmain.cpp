@@ -37,7 +37,7 @@ void hrMain::on_pushButton_loadTable_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("SELECT * FROM Employee");
+    qry->prepare("EXEC Refresh_Emp");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
@@ -52,17 +52,16 @@ void hrMain::on_pushButton_loadTable_clicked()
 // Update table information //
 void hrMain::on_pushButton_edit_clicked()
 {
-    QString ID, Last, First, Address, job, Hire, badge;
-    ID=ui->lineEdit_LName->text();
+    QString ID, Last, First, Address, job, Hire;
+    ID=ui->lineEdit_Badge->text();
     Last=ui->lineEdit_LName->text();
     First=ui->lineEdit_FName->text();
     Address=ui->lineEdit_EmpAddress->text();
     job=ui->lineEdit_EmpJobTitle->text();
     Hire=ui->lineEdit_hire->text();
-    badge=ui->lineEdit_Badge->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Employee SET FName='"+First+"', LName='"+Last+"', EmpAddress='"+Address+"', BadgeNum='"+badge+"', EmpJobTitle='"+job+"', HireDate='"+Hire+"' WHERE BadgeNum='"+badge+"'");
+    query.prepare("UPDATE Emp SET FName='"+First+"', LName='"+Last+"', EmpAddress='"+Address+"', EmpID='"+ID+"', EmpJobTitle='"+job+"', HireDate='"+Hire+"' WHERE EmpID='"+ID+"'");
     {
         if(query.exec())
         {
@@ -88,7 +87,8 @@ void hrMain::on_pushButton_save_clicked()
     badge=ui->lineEdit_Badge->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Employee (FName, LName, EmpAddress, EmpJobTitle, HireDate, BadgeNum) VALUES (?, ?, ?, ?, ?, ?)" );
+
+    query.prepare( "INSERT INTO Emp (FName, LName, EmpAddress, EmpJobTitle, HireDate, EmpID) VALUES (?, ?, ?, ?, ?, ?)" );
      query.addBindValue(Last);
     query.addBindValue(First);
     query.addBindValue(Address);
@@ -112,7 +112,7 @@ void hrMain::on_pushButton_delete_clicked()
     QString badge;
     badge=ui->lineEdit_Badge->text();
     QSqlQuery query;
-    query.prepare("DELETE FROM Employee WHERE BadgeNum='"+badge+"'");
+    query.prepare("DELETE FROM Emp WHERE EmpID='"+badge+"'");
 
     {
         if(query.exec())

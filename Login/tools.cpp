@@ -30,7 +30,7 @@ void tools::on_pushButton_save_tool_clicked()
     badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Tools (LastName, ToolName, CheckoutDate, BadgeNumber) VALUES (?, ?, ?, ?)" );
+    query.prepare( "INSERT INTO Tool (LastName, ToolName, CheckoutDate, EmpID) VALUES (?, ?, ?, ?)" );
      query.addBindValue(last);
     query.addBindValue(tool);
     query.addBindValue(date);
@@ -55,7 +55,7 @@ void tools::on_pushButton_delete_tool_clicked()
     QString badge;
     badge=ui->lineEdit_badge_tools->text();
     QSqlQuery query;
-    query.prepare("DELETE FROM Tools WHERE BadgeNumber='"+badge+"'");
+    query.prepare("DELETE FROM Tool WHERE EmpID='"+badge+"'");
 
     {
         if(query.exec())
@@ -78,7 +78,7 @@ void tools::on_pushButton_loadTable_tool_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("SELECT * FROM Tools");
+    qry->prepare("EXEC sprefreshDB_tools");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
@@ -100,7 +100,7 @@ void tools::on_pushButton_edit_tool_clicked()
     badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Tools SET LastName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', BadgeNumber='"+badge+"' WHERE BadgeNumber='"+badge+"'");
+    query.prepare("UPDATE Tool SET LastName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', EmpID='"+badge+"' WHERE EmpID='"+badge+"'");
     {
         if(query.exec())
         {
