@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QString>
 #include <QMessageBox>
+#include <QDate>
 
 tools::tools(QWidget *parent) :
     QDialog(parent),
@@ -23,12 +24,14 @@ tools::~tools()
 void tools::on_pushButton_save_tool_clicked()
 {
     //Save info into tool database//
-    QString line, empid, lname, toolname, checkout;
+    QString line, empid, lname, toolname;
     line=ui->lineEdit_linenum->text();
     empid=ui->lineEdit_badge_tools->text();
     lname=ui->lineEdi_LName->text();
     toolname=ui->lineEdit_toolName->text();
-    checkout=ui->lineEdit_checkout->text();
+    QDate date = QDate::currentDate();
+    ui->dateEdit_tool->setDate(date);
+
 
     QSqlQuery query;
     query.prepare( "INSERT INTO Tool (LineNumber, EmpID, LName, ToolName, CheckoutDate) VALUES (?, ?, ?, ?, ?)" );
@@ -36,7 +39,7 @@ void tools::on_pushButton_save_tool_clicked()
      query.addBindValue(empid);
     query.addBindValue(lname);
     query.addBindValue(toolname);
-    query.addBindValue(checkout);
+    query.addBindValue(date);
 
     {
         if(query.exec())
@@ -95,15 +98,16 @@ void tools::on_pushButton_loadTable_tool_clicked()
 void tools::on_pushButton_edit_tool_clicked()
 {
     //Update tool database //
-    QString line, last, tool, checkout, badge;
+    QString line, last, tool, badge;
     last=ui->lineEdi_LName->text();
     badge=ui->lineEdit_badge_tools->text();
     line=ui->lineEdit_linenum->text();
     tool=ui->lineEdit_toolName->text();
-    checkout=ui->lineEdit_checkout->text();
+
+
 
     QSqlQuery query;
-    query.prepare("UPDATE Tool SET LineNumber='"+line+"', LName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', EmpID='"+badge+"' WHERE LineNumber='"+line+"'");
+    query.prepare("UPDATE Tool SET LineNumber='"+line+"', LName='"+last+"', ToolName='"+tool+"', EmpID='"+badge+"' WHERE LineNumber='"+line+"'");
     {
         if(query.exec())
         {

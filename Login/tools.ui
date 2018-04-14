@@ -1582,7 +1582,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QDateEdit" name="dateEdit"/>
+       <widget class="QDateEdit" name="dateEdit_tool"/>
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit_checkout">

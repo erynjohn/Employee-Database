@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QString>
 #include <QMessageBox>
+#include <QDate>
 
 
 hrMain::hrMain(QWidget *parent) :
@@ -52,16 +53,17 @@ void hrMain::on_pushButton_loadTable_clicked()
 // Update table information //
 void hrMain::on_pushButton_edit_clicked()
 {
-    QString ID, Last, First, Address, job, Hire;
+    QString ID, Last, First, Address, job, hire;
     ID=ui->lineEdit_Badge->text();
     Last=ui->lineEdit_LName->text();
     First=ui->lineEdit_FName->text();
     Address=ui->lineEdit_EmpAddress->text();
     job=ui->lineEdit_EmpJobTitle->text();
-    Hire=ui->lineEdit_hire->text();
+
+
 
     QSqlQuery query;
-    query.prepare("UPDATE Emp SET FName='"+First+"', LName='"+Last+"', EmpAddress='"+Address+"', EmpID='"+ID+"', EmpJobTitle='"+job+"', HireDate='"+Hire+"' WHERE EmpID='"+ID+"'");
+    query.prepare("UPDATE Emp SET FName='"+First+"', LName='"+Last+"', EmpAddress='"+Address+"', EmpID='"+ID+"', EmpJobTitle='"+job+"' WHERE EmpID='"+ID+"'");
     {
         if(query.exec())
         {
@@ -78,22 +80,23 @@ void hrMain::on_pushButton_edit_clicked()
 // Save table information//
 void hrMain::on_pushButton_save_clicked()
 {
-    QString Last, First, Address, job, Hire, badge;
+    QString Last, First, Address, job, badge;
     Last=ui->lineEdit_LName->text();
     First=ui->lineEdit_FName->text();
     Address=ui->lineEdit_EmpAddress->text();
     job=ui->lineEdit_EmpJobTitle->text();
-    Hire=ui->lineEdit_hire->text();
     badge=ui->lineEdit_Badge->text();
+    QDate date = QDate::currentDate();
+    ui->dateEdit_hr->setDate(date);
 
     QSqlQuery query;
 
-    query.prepare( "INSERT INTO Emp (FName, LName, EmpAddress, EmpJobTitle, HireDate, EmpID) VALUES (?, ?, ?, ?, ?, ?)" );
+    query.prepare( "INSERT INTO Emp (FName, LName, EmpAddress, EmpJobTitle, EmpID, HireDate) VALUES (?, ?, ?, ?, ?, ?)" );
      query.addBindValue(Last);
     query.addBindValue(First);
     query.addBindValue(Address);
     query.addBindValue(job);
-    query.addBindValue(Hire);
+    query.addBindValue(date);
     query.addBindValue(badge);
     {
         if(query.exec())
