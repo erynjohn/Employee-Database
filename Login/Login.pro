@@ -48,4 +48,5 @@ FORMS += \
     warehouse.ui
 
 DISTFILES += \
-    ../../../../../../../GbManuf.db
+    ../../../../../../../Gb.db \
+    ../../../Database/GbManuf.db

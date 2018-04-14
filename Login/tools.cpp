@@ -23,15 +23,17 @@ tools::~tools()
 void tools::on_pushButton_save_tool_clicked()
 {
     //Save info into tool database//
-    QString last, tool, date, badge;
+    QString line, last, tool, date, badge;
     last=ui->lineEdi_LName->text();
+    line=ui->lineEdit->text();
     tool=ui->lineEdit_toolName->text();
     date=ui->lineEdit_checkout->text();
     badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Tool (LastName, ToolName, CheckoutDate, EmpID) VALUES (?, ?, ?, ?)" );
-     query.addBindValue(last);
+    query.prepare( "INSERT INTO Tool (LineNumber, LName, ToolName, CheckoutDate, EmpID) VALUES (?, ?, ?, ?, ?)" );
+    query.addBindValue(last);
+     query.addBindValue(line);
     query.addBindValue(tool);
     query.addBindValue(date);
     query.addBindValue(badge);
@@ -52,10 +54,10 @@ void tools::on_pushButton_delete_tool_clicked()
 {
 
     // Delete selected row using badge number //
-    QString badge;
-    badge=ui->lineEdit_badge_tools->text();
+    QString line;
+    line=ui->lineEdit->text();
     QSqlQuery query;
-    query.prepare("DELETE FROM Tool WHERE EmpID='"+badge+"'");
+    query.prepare("DELETE FROM Tool WHERE LineNumber='"+line+"'");
 
     {
         if(query.exec())
@@ -78,7 +80,7 @@ void tools::on_pushButton_loadTable_tool_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("SELECT * FROM tool");
+    qry->prepare("SELECT * FROM Tool");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
@@ -93,14 +95,15 @@ void tools::on_pushButton_loadTable_tool_clicked()
 void tools::on_pushButton_edit_tool_clicked()
 {
     //Update tool database //
-    QString last, tool, checkout, badge;
+    QString line, last, tool, checkout, badge;
     last=ui->lineEdi_LName->text();
+    badge=ui->lineEdit_badge_tools->text();
+    line=ui->lineEdit->text();
     tool=ui->lineEdit_toolName->text();
     checkout=ui->lineEdit_checkout->text();
-    badge=ui->lineEdit_badge_tools->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Tool SET LastName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', EmpID='"+badge+"' WHERE EmpID='"+badge+"'");
+    query.prepare("UPDATE Tool SET LineNumber='"+line+"', LName='"+last+"', ToolName='"+tool+"',CheckOutDate='"+checkout+"', EmpID='"+badge+"' WHERE LineNumber='"+line+"'");
     {
         if(query.exec())
         {

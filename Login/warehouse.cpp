@@ -33,17 +33,17 @@ void warehouse::on_pushButton_Wback_clicked()
 void warehouse::on_pushButton_save_WT_clicked()
 {
     //Save info into warehouse database//
-    QString Wname, StockNum, qty, material, status;
+    QString Wname, line, qty, material, status;
     Wname=ui->lineEdit_Wname->text();
     material=ui->lineEdit_material_WT->text();
-    StockNum=ui->lineEdit_stockNum->text();
+    line=ui->lineEdit_stockNum->text();
     qty=ui->lineEdit_qty->text();
     status=ui->lineEdit_status->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Warehouse (WarehouseName, StockNumber,Quantity, Material, Status) VALUES (?, ?, ?, ?, ?)" );
+    query.prepare( "INSERT INTO Warehouse (WarehouseName, LineNumber,Quantity, Material, Status) VALUES (?, ?, ?, ?, ?)" );
     query.addBindValue(Wname);
-    query.addBindValue(StockNum);
+    query.addBindValue(line);
     query.addBindValue(qty);
     query.addBindValue(material);
     query.addBindValue(status);
