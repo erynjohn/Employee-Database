@@ -14,8 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(188, 213, 255, 18), stop:0.35 rgba(188, 204, 255, 80), stop:0.386364 rgba(162, 184, 255, 0), stop:0.425 rgba(132, 141, 255, 156), stop:0.44 rgba(128, 153, 252, 80), stop:1 rgba(255, 255, 255, 0));
-font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+   <string notr="true"/>
   </property>
   <layout class="QFormLayout" name="formLayout">
    <item row="1" column="1">
@@ -83,9 +82,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -247,9 +246,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="ButtonText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -532,10 +531,154 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
          </brush>
         </colorrole>
        </active>
@@ -543,10 +686,154 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
          </brush>
         </colorrole>
        </inactive>
@@ -558,6 +845,150 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <green>120</green>
            <blue>120</blue>
           </color>
+         </brush>
+        </colorrole>
+        <colorrole role="Button">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Base">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="Window">
+         <brush brushstyle="LinearGradientPattern">
+          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+           <gradientstop position="0.000000000000000">
+            <color alpha="18">
+             <red>188</red>
+             <green>213</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.350000000000000">
+            <color alpha="80">
+             <red>188</red>
+             <green>204</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.386364000000000">
+            <color alpha="0">
+             <red>162</red>
+             <green>184</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.425000000000000">
+            <color alpha="156">
+             <red>132</red>
+             <green>141</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="0.440000000000000">
+            <color alpha="80">
+             <red>128</red>
+             <green>153</green>
+             <blue>252</blue>
+            </color>
+           </gradientstop>
+           <gradientstop position="1.000000000000000">
+            <color alpha="0">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </gradientstop>
+          </gradient>
          </brush>
         </colorrole>
        </disabled>
@@ -582,9 +1013,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -634,6 +1065,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -737,9 +1177,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -789,6 +1229,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -946,6 +1395,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              </gradient>
             </brush>
            </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
+            </brush>
+           </colorrole>
            <colorrole role="Base">
             <brush brushstyle="LinearGradientPattern">
              <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
@@ -1046,7 +1504,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
          </palette>
         </property>
         <property name="text">
-         <string>Badge Number</string>
+         <string>Employee ID</string>
         </property>
         <property name="buddy">
          <cstring>lineEdit_Badge</cstring>
@@ -1111,9 +1569,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -1266,9 +1724,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -1587,9 +2045,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -1742,9 +2200,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -2063,9 +2521,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -2218,9 +2676,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -2539,9 +2997,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -2694,9 +3152,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
              <colorrole role="ButtonText">
               <brush brushstyle="SolidPattern">
                <color alpha="255">
-                <red>219</red>
-                <green>237</green>
-                <blue>255</blue>
+                <red>0</red>
+                <green>0</green>
+                <blue>0</blue>
                </color>
               </brush>
              </colorrole>
@@ -2982,9 +3440,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -3034,6 +3492,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3137,9 +3604,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -3189,6 +3656,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3344,6 +3820,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3461,9 +3946,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -3513,6 +3998,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3616,9 +4110,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -3668,6 +4162,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3823,6 +4326,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -3953,9 +4465,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -4005,6 +4517,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4108,9 +4629,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -4160,6 +4681,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4315,6 +4845,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4417,7 +4956,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
          </palette>
         </property>
         <property name="text">
-         <string>Hire Date MM/DD/YYYY</string>
+         <string>Hire Date YYYY/MM/DD</string>
         </property>
         <property name="buddy">
          <cstring>lineEdit_hire</cstring>
@@ -4432,9 +4971,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -4484,6 +5023,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4587,9 +5135,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -4639,6 +5187,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4794,6 +5351,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -4918,9 +5484,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -4970,6 +5536,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -5073,9 +5648,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <colorrole role="WindowText">
             <brush brushstyle="SolidPattern">
              <color alpha="255">
-              <red>219</red>
-              <green>237</green>
-              <blue>255</blue>
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
              </color>
             </brush>
            </colorrole>
@@ -5125,6 +5700,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>0</red>
+              <green>0</green>
+              <blue>0</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -5280,6 +5864,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                </color>
               </gradientstop>
              </gradient>
+            </brush>
+           </colorrole>
+           <colorrole role="ButtonText">
+            <brush brushstyle="SolidPattern">
+             <color alpha="255">
+              <red>120</red>
+              <green>120</green>
+              <blue>120</blue>
+             </color>
             </brush>
            </colorrole>
            <colorrole role="Base">
@@ -5439,9 +6032,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -5491,6 +6084,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </color>
            </gradientstop>
           </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Base">
@@ -5594,9 +6196,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
         <colorrole role="WindowText">
          <brush brushstyle="SolidPattern">
           <color alpha="255">
-           <red>219</red>
-           <green>237</green>
-           <blue>255</blue>
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
           </color>
          </brush>
         </colorrole>
@@ -5646,6 +6248,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </color>
            </gradientstop>
           </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Base">
@@ -5801,6 +6412,15 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
             </color>
            </gradientstop>
           </gradient>
+         </brush>
+        </colorrole>
+        <colorrole role="ButtonText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>120</red>
+           <green>120</green>
+           <blue>120</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Base">

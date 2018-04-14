@@ -70,7 +70,7 @@ void warehouse::on_pushButton_Refresh_WT_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("EXEC sprefresh_war");
+    qry->prepare("SELECT * FROM warehouse");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);

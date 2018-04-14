@@ -78,7 +78,7 @@ void tools::on_pushButton_loadTable_tool_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("EXEC sprefreshDB_tools");
+    qry->prepare("SELECT * FROM tool");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);

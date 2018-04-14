@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QDebug>
+#include <QtSql>
+#include <QFileInfo>
 #include "employeemainmenu.h"
 #include "hrmain.h"
 
@@ -23,10 +25,12 @@ public:
     bool connOpen()
     {
         //Set var
-        db = QSqlDatabase::addDatabase("QODBC3");
-        //Set connection string
-        db.setDatabaseName("DRIVER={SQL Server};Server=localhost\\SQLEXPRESS01;Database=GbManuf;Trusted_Connection=True");
-        //connecting to database
+        db=QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName("C:\\GbManuf.db");
+//        db = QSqlDatabase::addDatabase("QODBC3");
+//        //Set connection string
+//        db.setDatabaseName("DRIVER={SQL Server};Server=localhost\\SQLEXPRESS01;Database=GbManuf;Trusted_Connection=True");
+//        //connecting to database
         db.open();
         if(!db.open())
         {

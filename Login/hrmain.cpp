@@ -37,7 +37,7 @@ void hrMain::on_pushButton_loadTable_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("EXEC Refresh_Emp");
+    qry->prepare("SELECT * FROM Emp");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
