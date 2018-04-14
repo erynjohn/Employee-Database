@@ -1498,15 +1498,15 @@
          </font>
         </property>
         <property name="text">
-         <string>Stock Number</string>
+         <string>Line Number</string>
         </property>
         <property name="buddy">
-         <cstring>lineEdit_stockNum</cstring>
+         <cstring>lineEdit_linenum</cstring>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_stockNum">
+       <widget class="QLineEdit" name="lineEdit_linenum">
         <property name="font">
          <font>
           <family>MS Shell Dlg 2</family>

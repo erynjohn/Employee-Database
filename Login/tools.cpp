@@ -23,20 +23,20 @@ tools::~tools()
 void tools::on_pushButton_save_tool_clicked()
 {
     //Save info into tool database//
-    QString line, last, tool, date, badge;
-    last=ui->lineEdi_LName->text();
-    line=ui->lineEdit->text();
-    tool=ui->lineEdit_toolName->text();
-    date=ui->lineEdit_checkout->text();
-    badge=ui->lineEdit_badge_tools->text();
+    QString line, empid, lname, toolname, checkout;
+    line=ui->lineEdit_linenum->text();
+    empid=ui->lineEdit_badge_tools->text();
+    lname=ui->lineEdi_LName->text();
+    toolname=ui->lineEdit_toolName->text();
+    checkout=ui->lineEdit_checkout->text();
 
     QSqlQuery query;
-    query.prepare( "INSERT INTO Tool (LineNumber, LName, ToolName, CheckoutDate, EmpID) VALUES (?, ?, ?, ?, ?)" );
-    query.addBindValue(last);
-     query.addBindValue(line);
-    query.addBindValue(tool);
-    query.addBindValue(date);
-    query.addBindValue(badge);
+    query.prepare( "INSERT INTO Tool (LineNumber, EmpID, LName, ToolName, CheckoutDate) VALUES (?, ?, ?, ?, ?)" );
+    query.addBindValue(line);
+     query.addBindValue(empid);
+    query.addBindValue(lname);
+    query.addBindValue(toolname);
+    query.addBindValue(checkout);
 
     {
         if(query.exec())
@@ -55,7 +55,7 @@ void tools::on_pushButton_delete_tool_clicked()
 
     // Delete selected row using badge number //
     QString line;
-    line=ui->lineEdit->text();
+    line=ui->lineEdit_linenum->text();
     QSqlQuery query;
     query.prepare("DELETE FROM Tool WHERE LineNumber='"+line+"'");
 
@@ -98,7 +98,7 @@ void tools::on_pushButton_edit_tool_clicked()
     QString line, last, tool, checkout, badge;
     last=ui->lineEdi_LName->text();
     badge=ui->lineEdit_badge_tools->text();
-    line=ui->lineEdit->text();
+    line=ui->lineEdit_linenum->text();
     tool=ui->lineEdit_toolName->text();
     checkout=ui->lineEdit_checkout->text();
 

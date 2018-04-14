@@ -36,7 +36,7 @@ void warehouse::on_pushButton_save_WT_clicked()
     QString Wname, line, qty, material, status;
     Wname=ui->lineEdit_Wname->text();
     material=ui->lineEdit_material_WT->text();
-    line=ui->lineEdit_stockNum->text();
+    line=ui->lineEdit_linenum->text();
     qty=ui->lineEdit_qty->text();
     status=ui->lineEdit_status->text();
 
@@ -70,7 +70,7 @@ void warehouse::on_pushButton_Refresh_WT_clicked()
     QSqlQueryModel *model = new QSqlQueryModel();
     QSqlQuery* qry = new QSqlQuery(conn.db);
 
-    qry->prepare("SELECT * FROM warehouse");
+    qry->prepare("SELECT * FROM Warehouse");
     qry->exec();
     model->setQuery(*qry);
     ui->tableView->setModel(model);
@@ -84,10 +84,10 @@ void warehouse::on_pushButton_Refresh_WT_clicked()
 void warehouse::on_pushButton_delete_WT_clicked()
 {
     // Delete selected row using badge number //
-    QString StockNum;
-    StockNum=ui->lineEdit_stockNum->text();
+    QString line;
+    line=ui->lineEdit_linenum->text();
     QSqlQuery query;
-    query.prepare("DELETE FROM Warehouse WHERE StockNumber='"+StockNum+"'");
+    query.prepare("DELETE FROM Warehouse WHERE LineNumber='"+line+"'");
 
     {
         if(query.exec())
@@ -106,15 +106,15 @@ void warehouse::on_pushButton_delete_WT_clicked()
 void warehouse::on_pushButton_Update_WT_clicked()
 {
     //Update warehouse database //
-    QString Wname, qty, material, status, StockNum;
+    QString Wname, qty, material, status, line;
     Wname=ui->lineEdit_Wname->text();
-    StockNum=ui->lineEdit_stockNum->text();
+    line=ui->lineEdit_linenum->text();
     qty=ui->lineEdit_qty->text();
     material=ui->lineEdit_material_WT->text();
     status=ui->lineEdit_status->text();
 
     QSqlQuery query;
-    query.prepare("UPDATE Warehouse SET WarehouseName='"+Wname+"', StockNumber='"+StockNum+"', Quantity='"+qty+"', Material='"+material+"',Status='"+status+"' WHERE StockNumber='"+StockNum+"'");
+    query.prepare("UPDATE Warehouse SET WarehouseName='"+Wname+"', LineNumber='"+line+"', Quantity='"+qty+"', Material='"+material+"',Status='"+status+"' WHERE LineNumber='"+line+"'");
     {
         if(query.exec())
         {

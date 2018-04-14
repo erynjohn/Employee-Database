@@ -26,7 +26,7 @@ public:
     {
         //Set var
         db=QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName("C:\\Users\\johnm\\OneDrive\\Desktop\\Database\\GbManuf.db");
+        db.setDatabaseName("C:/Users/johnm/OneDrive/Desktop/Database/GbManuf.db");
 //        db = QSqlDatabase::addDatabase("QODBC3");
 //        //Set connection string
 //        db.setDatabaseName("DRIVER={SQL Server};Server=localhost\\SQLEXPRESS01;Database=GbManuf;Trusted_Connection=True");
