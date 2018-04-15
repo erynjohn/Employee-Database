@@ -534,7 +534,7 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Welcome to Gb Manufacturing</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -555,51 +555,12 @@
          </brush>
         </colorrole>
         <colorrole role="Button">
-         <brush brushstyle="LinearGradientPattern">
-          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-           <gradientstop position="0.000000000000000">
-            <color alpha="18">
-             <red>188</red>
-             <green>213</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.350000000000000">
-            <color alpha="80">
-             <red>188</red>
-             <green>204</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.386364000000000">
-            <color alpha="0">
-             <red>162</red>
-             <green>184</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.425000000000000">
-            <color alpha="156">
-             <red>132</red>
-             <green>141</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.440000000000000">
-            <color alpha="80">
-             <red>128</red>
-             <green>153</green>
-             <blue>252</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="1.000000000000000">
-            <color alpha="0">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-          </gradient>
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>85</green>
+           <blue>255</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Text">
@@ -728,51 +689,12 @@
          </brush>
         </colorrole>
         <colorrole role="Button">
-         <brush brushstyle="LinearGradientPattern">
-          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-           <gradientstop position="0.000000000000000">
-            <color alpha="18">
-             <red>188</red>
-             <green>213</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.350000000000000">
-            <color alpha="80">
-             <red>188</red>
-             <green>204</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.386364000000000">
-            <color alpha="0">
-             <red>162</red>
-             <green>184</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.425000000000000">
-            <color alpha="156">
-             <red>132</red>
-             <green>141</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.440000000000000">
-            <color alpha="80">
-             <red>128</red>
-             <green>153</green>
-             <blue>252</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="1.000000000000000">
-            <color alpha="0">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-          </gradient>
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>85</green>
+           <blue>255</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Text">
@@ -901,51 +823,12 @@
          </brush>
         </colorrole>
         <colorrole role="Button">
-         <brush brushstyle="LinearGradientPattern">
-          <gradient startx="0.000000000000000" starty="0.000000000000000" endx="1.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
-           <gradientstop position="0.000000000000000">
-            <color alpha="18">
-             <red>188</red>
-             <green>213</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.350000000000000">
-            <color alpha="80">
-             <red>188</red>
-             <green>204</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.386364000000000">
-            <color alpha="0">
-             <red>162</red>
-             <green>184</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.425000000000000">
-            <color alpha="156">
-             <red>132</red>
-             <green>141</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="0.440000000000000">
-            <color alpha="80">
-             <red>128</red>
-             <green>153</green>
-             <blue>252</blue>
-            </color>
-           </gradientstop>
-           <gradientstop position="1.000000000000000">
-            <color alpha="0">
-             <red>255</red>
-             <green>255</green>
-             <blue>255</blue>
-            </color>
-           </gradientstop>
-          </gradient>
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>85</green>
+           <blue>255</blue>
+          </color>
          </brush>
         </colorrole>
         <colorrole role="Text">
@@ -1068,10 +951,10 @@
      <property name="font">
       <font>
        <family>MS Shell Dlg 2</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
+       <pointsize>16</pointsize>
+       <weight>75</weight>
        <italic>false</italic>
-       <bold>false</bold>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -1502,10 +1385,10 @@
      <property name="font">
       <font>
        <family>MS Shell Dlg 2</family>
-       <pointsize>14</pointsize>
-       <weight>50</weight>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
        <italic>false</italic>
-       <bold>false</bold>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -1640,10 +1523,10 @@
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>
-            <pointsize>14</pointsize>
-            <weight>50</weight>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
             <italic>false</italic>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
@@ -1777,10 +1660,10 @@
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>
-            <pointsize>14</pointsize>
-            <weight>50</weight>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
             <italic>false</italic>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">
@@ -1914,10 +1797,10 @@
           <property name="font">
            <font>
             <family>MS Shell Dlg 2</family>
-            <pointsize>14</pointsize>
-            <weight>50</weight>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
             <italic>false</italic>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="styleSheet">

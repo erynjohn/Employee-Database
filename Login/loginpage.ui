@@ -102,7 +102,7 @@
    </palette>
   </property>
   <property name="windowTitle">
-   <string>LoginPage</string>
+   <string>Welcome to Gb Manufacturing</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(219, 238, 255);</string>

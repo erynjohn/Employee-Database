@@ -31,8 +31,6 @@ void LoginPage::on_login_clicked()
         qDebug() << "Database error";
     }
     QSqlQuery qry;
-    QString admin;
-    QString Password;
     if(qry.exec("SELECT * FROM Emp WHERE LName=\'"+username +"'and EmpID='"+password +"'"))
     {
         if(qry.next())
@@ -54,12 +52,5 @@ void LoginPage::on_login_clicked()
         }
 
     }
-//    if(username == admin && password == Password)
-//        this->hide();
-//        EmployeeMainMenu empmenu;
-//        empmenu.setModal(true);
-//        empmenu.exec();
-
-
 
 }

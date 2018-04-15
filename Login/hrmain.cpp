@@ -58,7 +58,7 @@ void hrMain::on_pushButton_edit_clicked()
     QString ID, Last, First, Address, job, hire;
     ID=ui->lineEdit_Badge->text();
     Last=ui->lineEdit_LName->text();
-    First=ui->lineEdit_FName->text();
+    First=ui->lineEdit_FName_2->text();
     Address=ui->lineEdit_EmpAddress->text();
     job=ui->lineEdit_EmpJobTitle->text();
 
@@ -85,7 +85,7 @@ void hrMain::on_pushButton_save_clicked()
 {
     QString Last, First, Address, job, badge;
     Last=ui->lineEdit_LName->text();
-    First=ui->lineEdit_FName->text();
+    First=ui->lineEdit_FName_2->text();
     Address=ui->lineEdit_EmpAddress->text();
     job=ui->lineEdit_EmpJobTitle->text();
     badge=ui->lineEdit_Badge->text();

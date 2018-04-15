@@ -27,7 +27,7 @@ void tools::on_pushButton_save_tool_clicked()
     //Save info into tool database//
     QString line, empid, lname, toolname;
     line=ui->lineEdit_linenum->text();
-    empid=ui->lineEdit_badge_tools->text();
+    empid=ui->lineEdit_toolName->text();
     lname=ui->lineEdi_LName->text();
     toolname=ui->lineEdit_toolName->text();
     QDate date = QDate::currentDate();
@@ -103,7 +103,7 @@ void tools::on_pushButton_edit_tool_clicked()
     //Update tool database //
     QString line, last, tool, badge;
     last=ui->lineEdi_LName->text();
-    badge=ui->lineEdit_badge_tools->text();
+    badge=ui->lineEdit_ID->text();
     line=ui->lineEdit_linenum->text();
     tool=ui->lineEdit_toolName->text();
 
