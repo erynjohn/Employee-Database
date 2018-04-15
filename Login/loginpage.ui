@@ -299,9 +299,9 @@
                 <font>
                  <family>MS Shell Dlg 2</family>
                  <pointsize>14</pointsize>
-                 <weight>50</weight>
+                 <weight>75</weight>
                  <italic>false</italic>
-                 <bold>false</bold>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -600,9 +600,9 @@
                 <font>
                  <family>MS Shell Dlg 2</family>
                  <pointsize>14</pointsize>
-                 <weight>50</weight>
+                 <weight>75</weight>
                  <italic>false</italic>
-                 <bold>false</bold>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="styleSheet">
@@ -876,10 +876,10 @@
                <property name="font">
                 <font>
                  <family>MS Shell Dlg 2</family>
-                 <pointsize>14</pointsize>
-                 <weight>50</weight>
+                 <pointsize>16</pointsize>
+                 <weight>75</weight>
                  <italic>false</italic>
-                 <bold>false</bold>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="text">
@@ -1014,9 +1014,9 @@
                 <font>
                  <family>MS Shell Dlg 2</family>
                  <pointsize>14</pointsize>
-                 <weight>50</weight>
+                 <weight>75</weight>
                  <italic>false</italic>
-                 <bold>false</bold>
+                 <bold>true</bold>
                 </font>
                </property>
                <property name="layoutDirection">

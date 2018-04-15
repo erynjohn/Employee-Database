@@ -51,13 +51,9 @@ void warehouse::on_pushButton_save_WT_clicked()
 
 
     {
-        if(query.exec())
+        if(!query.exec())
         {
-            QMessageBox::information(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshtable();
@@ -87,19 +83,14 @@ void warehouse::on_pushButton_delete_WT_clicked()
 {
     // Delete selected row using badge number //
     QString line;
-    line=ui->lineEdit_linenum->text();
+    line=ui->lineEdit_linenum_delete->text();
     QSqlQuery query;
     query.prepare("DELETE FROM Warehouse WHERE LineNumber='"+line+"'");
 
     {
-        if(query.exec())
+        if(!query.exec())
         {
-
-            QMessageBox::information(this, "Delete","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Delete Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshtable();
@@ -119,15 +110,11 @@ void warehouse::on_pushButton_Update_WT_clicked()
     QSqlQuery query;
     query.prepare("UPDATE Warehouse SET WarehouseName='"+Wname+"', LineNumber='"+line+"', Quantity='"+qty+"', Material='"+material+"',Status='"+status+"' WHERE LineNumber='"+line+"'");
     {
-        if(query.exec())
+        if(!query.exec())
         {
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
+        }
 
-            QMessageBox::information(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
-        }
     }
     refreshtable();
 }

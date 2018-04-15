@@ -37,7 +37,6 @@ void LoginPage::on_login_clicked()
         {
             //Set login authentication //
 
-            QMessageBox::information(this, "Login",username + ", You are logged in");
             QString msg ="username = " + qry.value(0).toString() + " \n " +
                     "password = " + qry.value(3).toString();
             this->hide();
@@ -48,7 +47,7 @@ void LoginPage::on_login_clicked()
         }
         else
         {
-            QMessageBox::warning(this, "Warning", "Login has failed");
+            QMessageBox::warning(this, "Warning", "Login has failed, Please Try again");
         }
 
     }

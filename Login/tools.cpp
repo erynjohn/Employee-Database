@@ -27,7 +27,7 @@ void tools::on_pushButton_save_tool_clicked()
     //Save info into tool database//
     QString line, empid, lname, toolname;
     line=ui->lineEdit_linenum->text();
-    empid=ui->lineEdit_toolName->text();
+    empid=ui->lineEdit_ID->text();
     lname=ui->lineEdi_LName->text();
     toolname=ui->lineEdit_toolName->text();
     QDate date = QDate::currentDate();
@@ -43,13 +43,9 @@ void tools::on_pushButton_save_tool_clicked()
     query.addBindValue(date);
 
     {
-        if(query.exec())
+        if(!query.exec())
         {
-            QMessageBox::information(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshtable();
@@ -60,22 +56,17 @@ void tools::on_pushButton_delete_tool_clicked()
 
     // Delete selected row using badge number //
     QString line;
-    line=ui->lineEdit_linenum->text();
+    line=ui->lineEdit_linenum_delete->text();
     QSqlQuery query;
     query.prepare("DELETE FROM Tool WHERE LineNumber='"+line+"'");
 
     {
-        if(query.exec())
+        if(!query.exec())
         {
-
-            QMessageBox::information(this, "Delete","Database updated!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Delete Failed!");
-        }
+        refreshtable();
     }
-    refreshtable();
 }
 
 void tools::refreshtable()
@@ -112,14 +103,9 @@ void tools::on_pushButton_edit_tool_clicked()
     QSqlQuery query;
     query.prepare("UPDATE Tool SET LineNumber='"+line+"', LName='"+last+"', ToolName='"+tool+"', EmpID='"+badge+"' WHERE LineNumber='"+line+"'");
     {
-        if(query.exec())
+        if(!query.exec())
         {
-
-            QMessageBox::information(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshtable();

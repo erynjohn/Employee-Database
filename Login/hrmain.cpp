@@ -67,14 +67,9 @@ void hrMain::on_pushButton_edit_clicked()
     QSqlQuery query;
     query.prepare("UPDATE Emp SET FName='"+First+"', LName='"+Last+"', EmpAddress='"+Address+"', EmpID='"+ID+"', EmpJobTitle='"+job+"' WHERE EmpID='"+ID+"'");
     {
-        if(query.exec())
+        if(!query.exec())
         {
-
-            QMessageBox::critical(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshTable();
@@ -102,13 +97,9 @@ void hrMain::on_pushButton_save_clicked()
     query.addBindValue(job);
     query.addBindValue(date);
     {
-        if(query.exec())
+        if(!query.exec())
         {
-            QMessageBox::critical(this, "Save","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Update Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshTable();
@@ -117,19 +108,14 @@ void hrMain::on_pushButton_save_clicked()
 void hrMain::on_pushButton_delete_clicked()
 {
     QString badge;
-    badge=ui->lineEdit_Badge->text();
+    badge=ui->lineEdit_Badge_delete->text();
     QSqlQuery query;
     query.prepare("DELETE FROM Emp WHERE EmpID='"+badge+"'");
 
     {
-        if(query.exec())
+        if(!query.exec())
         {
-
-            QMessageBox::critical(this, "Delete","Database updated!");
-        }
-        else
-        {
-            QMessageBox::warning(this, "Error", "Delete Failed!");
+            QMessageBox::warning(this, "Error", "Duplicate ID or Line Item!");
         }
     }
     refreshTable();
