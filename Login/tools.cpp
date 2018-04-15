@@ -14,6 +14,7 @@ tools::tools(QWidget *parent) :
     ui(new Ui::tools)
 {
     ui->setupUi(this);
+    refreshtable();
 }
 
 tools::~tools()
@@ -51,6 +52,7 @@ void tools::on_pushButton_save_tool_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshtable();
 }
 
 void tools::on_pushButton_delete_tool_clicked()
@@ -73,9 +75,10 @@ void tools::on_pushButton_delete_tool_clicked()
             QMessageBox::warning(this, "Error", "Delete Failed!");
         }
     }
+    refreshtable();
 }
 
-void tools::on_pushButton_loadTable_tool_clicked()
+void tools::refreshtable()
 {
     LoginPage conn;
 
@@ -119,6 +122,7 @@ void tools::on_pushButton_edit_tool_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshtable();
 }
 
 void tools::on_pushButton_Hback_clicked()

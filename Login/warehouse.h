@@ -20,7 +20,7 @@ private slots:
 
     void on_pushButton_save_WT_clicked();
 
-    void on_pushButton_Refresh_WT_clicked();
+    void refreshtable();
 
     void on_pushButton_delete_WT_clicked();
 

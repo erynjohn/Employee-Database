@@ -14,6 +14,7 @@ warehouse::warehouse(QWidget *parent) :
 
 {
     ui->setupUi(this);
+    refreshtable();
 
 }
 
@@ -59,10 +60,11 @@ void warehouse::on_pushButton_save_WT_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshtable();
 
 }
 
-void warehouse::on_pushButton_Refresh_WT_clicked()
+void warehouse::refreshtable()
 {
     LoginPage conn;
 
@@ -100,6 +102,7 @@ void warehouse::on_pushButton_delete_WT_clicked()
             QMessageBox::warning(this, "Error", "Delete Failed!");
         }
     }
+    refreshtable();
 
 }
 
@@ -126,4 +129,5 @@ void warehouse::on_pushButton_Update_WT_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshtable();
 }

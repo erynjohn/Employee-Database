@@ -20,7 +20,7 @@ private slots:
 
     void on_pushButton_delete_tool_clicked();
 
-    void on_pushButton_loadTable_tool_clicked();
+    void refreshtable();
 
     void on_pushButton_edit_tool_clicked();
 

@@ -15,11 +15,13 @@ hrMain::hrMain(QWidget *parent) :
     ui(new Ui::hrMain)
 {
     ui->setupUi(this);
+    refreshTable();
 }
 
 hrMain::~hrMain()
 {
     delete ui;
+
 }
 
 void hrMain::on_pushButton_Hback_clicked()
@@ -31,7 +33,7 @@ void hrMain::on_pushButton_Hback_clicked()
         empMenu.exec();
 }
 // Refresh table view //
-void hrMain::on_pushButton_loadTable_clicked()
+void hrMain::refreshTable()
 {
     LoginPage conn;
 
@@ -75,6 +77,7 @@ void hrMain::on_pushButton_edit_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshTable();
 }
 
 // Save table information//
@@ -91,13 +94,13 @@ void hrMain::on_pushButton_save_clicked()
 
     QSqlQuery query;
 
-    query.prepare( "INSERT INTO Emp (FName, LName, EmpAddress, EmpJobTitle, EmpID, HireDate) VALUES (?, ?, ?, ?, ?, ?)" );
-     query.addBindValue(Last);
+    query.prepare( "INSERT INTO Emp (EmpID, LName, FName, EmpAddress, EmpJobTitle, HireDate) VALUES (?, ?, ?, ?, ?, ?)" );
+    query.addBindValue(badge);
+    query.addBindValue(Last);
     query.addBindValue(First);
     query.addBindValue(Address);
     query.addBindValue(job);
     query.addBindValue(date);
-    query.addBindValue(badge);
     {
         if(query.exec())
         {
@@ -108,6 +111,7 @@ void hrMain::on_pushButton_save_clicked()
             QMessageBox::warning(this, "Error", "Update Failed!");
         }
     }
+    refreshTable();
 }
 // Delete table information //
 void hrMain::on_pushButton_delete_clicked()
@@ -128,4 +132,5 @@ void hrMain::on_pushButton_delete_clicked()
             QMessageBox::warning(this, "Error", "Delete Failed!");
         }
     }
+    refreshTable();
 }
